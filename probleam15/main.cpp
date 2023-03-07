@@ -10,12 +10,13 @@
 #include <algorithm>
 #include <fstream>
 #include <cmath>
+#include <sstream>
 
 using namespace std;
 
-long LargeSum(std::vector<std::string> &numVector) {
+string LargeSum(std::vector<std::string> &numVector) {
     vector<int> iNums;
-    long result = 0;
+    string result;
     do {
         if (numVector.empty()) {
             break;
@@ -26,26 +27,38 @@ long LargeSum(std::vector<std::string> &numVector) {
             return atoi(&c);
         });
 
-        int cDigitSum = 0;
+        int cDigitSum = 0, pNum = 0, iDigit = 0;
+        int largestDigitSum = 0;
         for (index += 1; index != numVector.end(); ++index) {
             string cNum = *index;
-            for (auto i = cNum.size() - 1; i >= 0; --i) {
-                int iDigit = (int)cNum.at(i) - 48 ;
-                cDigitSum += iDigit + iNums[i];
-                iNums[i] = cDigitSum % 10;;
+            auto j = iNums.rbegin();
+            auto i = cNum.rbegin();
+            for (; i != cNum.rend(); ++i, ++j)  {
+                pNum = *j;
+                iDigit = (int)(*i) - 48;
+                cDigitSum += iDigit + pNum;
+                *j = cDigitSum % 10;
                 cDigitSum /= 10;
+//                cout << iDigit << " " << pNum << " sum "<< *j << cDigitSum << endl;
             }
+            largestDigitSum += cDigitSum;
+            cDigitSum = 0;
+            cout << cDigitSum  <<endl;
         }
 
         if (cDigitSum > 0) {
-            iNums.push_back(cDigitSum);
+            iNums.insert(iNums.begin(), cDigitSum);
         }
-
-        for (int i = 0 ; i < 10; ++i) {
-            cout << iNums[i] << endl;
-            result += iNums[i] * std::pow(10, i);
+        
+        
+        auto r = iNums.cbegin();
+        ostringstream oss;
+        while (r != iNums.cend()) {
+            oss << *r;
+            ++r;
+            
         }
-
+        result = oss.str();
     } while (0);
 
     return result;
@@ -60,7 +73,7 @@ int main(int argc, const char * argv[]) {
     std::string fileName{argv[1]};
     std::string fileName2{argv[2]};
     cout << "fileName: " << fileName << "fileNmae2" << fileName2 << endl;
-    ifstream of{string{fileName2},ofstream::binary | ofstream::in};
+    ifstream of{string{fileName},ofstream::binary | ofstream::in};
     vector<std::string> numVector;
 
     string num;
@@ -69,7 +82,7 @@ int main(int argc, const char * argv[]) {
         numVector.push_back(num);
     }
 
-    long sum = LargeSum(numVector);
+    string sum = LargeSum(numVector);
     cout << sum << endl;
   }
 

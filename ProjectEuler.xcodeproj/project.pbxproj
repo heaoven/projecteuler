@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -33,12 +33,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8F3F2D0D29B781C100987ECB /* Test.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Test.txt; sourceTree = "<group>"; };
+		8F3F2D0E29B781F000987ECB /* TestTwoLine.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestTwoLine.txt; sourceTree = "<group>"; };
 		EB72239329B729BC0028EF4C /* ProjectEuler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ProjectEuler; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB72239629B729BC0028EF4C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		EB7223A129B72E720028EF4C /* probleam15 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = probleam15; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB7223A329B72E720028EF4C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		EB7223A829B7314E0028EF4C /* Test.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Test.txt; sourceTree = "<group>"; };
-		EB7223A929B7445B0028EF4C /* TestTwoLine.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestTwoLine.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				EB7223A329B72E720028EF4C /* main.cpp */,
-				EB7223A829B7314E0028EF4C /* Test.txt */,
-				EB7223A929B7445B0028EF4C /* TestTwoLine.txt */,
+				8F3F2D0D29B781C100987ECB /* Test.txt */,
+				8F3F2D0E29B781F000987ECB /* TestTwoLine.txt */,
 			);
 			path = probleam15;
 			sourceTree = "<group>";
@@ -150,7 +150,7 @@
 				};
 			};
 			buildConfigurationList = EB72238E29B729BC0028EF4C /* Build configuration list for PBXProject "ProjectEuler" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -301,6 +301,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -309,6 +310,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -317,6 +319,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -325,6 +328,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
