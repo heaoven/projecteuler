@@ -37,6 +37,8 @@
 		EB72239629B729BC0028EF4C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		EB7223A129B72E720028EF4C /* probleam15 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = probleam15; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB7223A329B72E720028EF4C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		EB7223A829B7314E0028EF4C /* Test.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Test.txt; sourceTree = "<group>"; };
+		EB7223A929B7445B0028EF4C /* TestTwoLine.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestTwoLine.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				EB7223A329B72E720028EF4C /* main.cpp */,
+				EB7223A829B7314E0028EF4C /* Test.txt */,
+				EB7223A929B7445B0028EF4C /* TestTwoLine.txt */,
 			);
 			path = probleam15;
 			sourceTree = "<group>";
