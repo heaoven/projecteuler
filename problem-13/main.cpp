@@ -39,24 +39,20 @@ string LargeSum(std::vector<std::string> &numVector) {
                 cDigitSum += iDigit + pNum;
                 *j = cDigitSum % 10;
                 cDigitSum /= 10;
-//                cout << iDigit << " " << pNum << " sum "<< *j << cDigitSum << endl;
             }
             largestDigitSum += cDigitSum;
             cDigitSum = 0;
             cout << cDigitSum  <<endl;
         }
 
-        if (cDigitSum > 0) {
-            iNums.insert(iNums.begin(), cDigitSum);
+        if (largestDigitSum > 0) {
+            iNums.insert(iNums.begin(), largestDigitSum);
         }
         
         
-        auto r = iNums.cbegin();
         ostringstream oss;
-        while (r != iNums.cend()) {
-            oss << *r;
-            ++r;
-            
+        for (int i = 0; i < 10; ++i) {
+            oss << iNums[i];
         }
         result = oss.str();
     } while (0);
